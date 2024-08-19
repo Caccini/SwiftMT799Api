@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="../build/SwiftMT799Api.props" />
+</Project>
