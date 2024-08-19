@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SwiftMT799Api")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+19820cc0f8f8bdc796ac61d9f9470860bdb94886")]
 [assembly: System.Reflection.AssemblyProductAttribute("SwiftMT799Api")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SwiftMT799Api")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

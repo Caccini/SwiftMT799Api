@@ -1,0 +1,609 @@
+2024-08-19 09:28:32.0734|0|DEBUG|SwiftMT799Api.Program|init main 
+2024-08-19 09:28:32.1996|12|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ModelBinderFactory|Registered model binder providers, in the following order: Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.TryParseModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider 
+2024-08-19 09:28:32.2146|1|DEBUG|Microsoft.Extensions.Hosting.Internal.Host|Hosting starting 
+2024-08-19 09:28:32.2385|11|ERROR|Microsoft.Extensions.Hosting.Internal.Host|Hosting failed to start System.IO.IOException: Failed to bind to address http://127.0.0.1:5284: address already in use.
+ ---> Microsoft.AspNetCore.Connections.AddressInUseException: Address already in use
+ ---> System.Net.Sockets.SocketException (48): Address already in use
+   at System.Net.Sockets.Socket.DoBind(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Bind(EndPoint localEP)
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketTransportOptions.CreateDefaultBoundListenSocket(EndPoint endpoint)
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketConnectionListener.Bind()
+   --- End of inner exception stack trace ---
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketConnectionListener.Bind()
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketTransportFactory.BindAsync(EndPoint endpoint, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Infrastructure.TransportManager.BindAsync(EndPoint endPoint, ConnectionDelegate connectionDelegate, EndpointConfig endpointConfig, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerImpl.<>c__DisplayClass28_0`1.<<StartAsync>g__OnBind|0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindEndpointAsync(ListenOptions endpoint, AddressBindContext context, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindEndpointAsync(ListenOptions endpoint, AddressBindContext context, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.LocalhostListenOptions.BindAsync(AddressBindContext context, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.AddressesStrategy.BindAsync(AddressBindContext context, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindAsync(ListenOptions[] listenOptions, AddressBindContext context, Func`2 useHttps, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerImpl.BindAsync(CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerImpl.StartAsync[TContext](IHttpApplication`1 application, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.Extensions.Hosting.Internal.Host.<StartAsync>b__15_1(IHostedService service, CancellationToken token)
+   at Microsoft.Extensions.Hosting.Internal.Host.ForeachService[T](IEnumerable`1 services, CancellationToken token, Boolean concurrent, Boolean abortOnFirstException, List`1 exceptions, Func`3 operation)
+2024-08-19 09:28:32.2452|0|ERROR|SwiftMT799Api.Program|Stopped program because of exception System.IO.IOException: Failed to bind to address http://127.0.0.1:5284: address already in use.
+ ---> Microsoft.AspNetCore.Connections.AddressInUseException: Address already in use
+ ---> System.Net.Sockets.SocketException (48): Address already in use
+   at System.Net.Sockets.Socket.DoBind(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Bind(EndPoint localEP)
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketTransportOptions.CreateDefaultBoundListenSocket(EndPoint endpoint)
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketConnectionListener.Bind()
+   --- End of inner exception stack trace ---
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketConnectionListener.Bind()
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketTransportFactory.BindAsync(EndPoint endpoint, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Infrastructure.TransportManager.BindAsync(EndPoint endPoint, ConnectionDelegate connectionDelegate, EndpointConfig endpointConfig, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerImpl.<>c__DisplayClass28_0`1.<<StartAsync>g__OnBind|0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindEndpointAsync(ListenOptions endpoint, AddressBindContext context, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindEndpointAsync(ListenOptions endpoint, AddressBindContext context, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.LocalhostListenOptions.BindAsync(AddressBindContext context, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.AddressesStrategy.BindAsync(AddressBindContext context, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindAsync(ListenOptions[] listenOptions, AddressBindContext context, Func`2 useHttps, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerImpl.BindAsync(CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerImpl.StartAsync[TContext](IHttpApplication`1 application, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.Extensions.Hosting.Internal.Host.<StartAsync>b__15_1(IHostedService service, CancellationToken token)
+   at Microsoft.Extensions.Hosting.Internal.Host.ForeachService[T](IEnumerable`1 services, CancellationToken token, Boolean concurrent, Boolean abortOnFirstException, List`1 exceptions, Func`3 operation)
+   at Microsoft.Extensions.Hosting.Internal.Host.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.RunAsync(IHost host, CancellationToken token)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.RunAsync(IHost host, CancellationToken token)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.Run(IHost host)
+   at Program.<Main>$(String[] args) in /Users/elizaognyanova/SwiftMT799Api/Program.cs:line 43
+2024-08-19 09:36:17.2384|0|DEBUG|SwiftMT799Api.Program|init main 
+2024-08-19 09:36:17.3806|12|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ModelBinderFactory|Registered model binder providers, in the following order: Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.TryParseModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider 
+2024-08-19 09:36:17.3964|1|DEBUG|Microsoft.Extensions.Hosting.Internal.Host|Hosting starting 
+2024-08-19 09:36:17.4183|14|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5284 
+2024-08-19 09:36:17.4208|13|DEBUG|Microsoft.AspNetCore.Hosting.Diagnostics|Loaded hosting startup assembly SwiftMT799Api 
+2024-08-19 09:36:17.4208|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2024-08-19 09:36:17.4208|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2024-08-19 09:36:17.4208|0|INFO|Microsoft.Hosting.Lifetime|Content root path: /Users/elizaognyanova/SwiftMT799Api 
+2024-08-19 09:36:17.4208|2|DEBUG|Microsoft.Extensions.Hosting.Internal.Host|Hosting started 
+2024-08-19 09:36:19.6403|39|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN6034U341D1" accepted. 
+2024-08-19 09:36:19.6479|1|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN6034U341D1" started. 
+2024-08-19 09:36:19.9110|39|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN6034U341D2" accepted. 
+2024-08-19 09:36:19.9116|1|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN6034U341D2" started. 
+2024-08-19 09:36:19.9403|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:5284/index.html - - - 
+2024-08-19 09:36:19.9411|0|DEBUG|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|Wildcard detected, all requests with hosts will be allowed. 
+2024-08-19 09:36:19.9411|2|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2024-08-19 09:36:19.9471|1000|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|No candidates found for the request path '/index.html' 
+2024-08-19 09:36:19.9471|2|DEBUG|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|Request did not match any endpoints 
+2024-08-19 09:36:19.9817|9|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN6034U341D1" completed keep alive response. 
+2024-08-19 09:36:19.9826|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:5284/index.html - 200 - text/html;charset=utf-8 42.3314ms 
+2024-08-19 09:36:19.9867|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:5284/index.js - - - 
+2024-08-19 09:36:19.9867|2|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2024-08-19 09:36:19.9867|1000|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|No candidates found for the request path '/index.js' 
+2024-08-19 09:36:19.9867|2|DEBUG|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|Request did not match any endpoints 
+2024-08-19 09:36:19.9867|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:5284/index.css - - - 
+2024-08-19 09:36:19.9867|2|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2024-08-19 09:36:19.9874|1000|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|No candidates found for the request path '/index.css' 
+2024-08-19 09:36:19.9874|2|DEBUG|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|Request did not match any endpoints 
+2024-08-19 09:36:19.9874|9|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN6034U341D1" completed keep alive response. 
+2024-08-19 09:36:19.9874|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:5284/index.js - 200 - application/javascript;charset=utf-8 1.4187ms 
+2024-08-19 09:36:19.9891|0|TRACE|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Range header's value is empty. 
+2024-08-19 09:36:19.9905|2|INFO|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Sending file. Request path: '/index.css'. Physical path: 'N/A' 
+2024-08-19 09:36:19.9905|9|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN6034U341D2" completed keep alive response. 
+2024-08-19 09:36:19.9905|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:5284/index.css - 200 202 text/css 3.1515ms 
+2024-08-19 09:36:19.9916|39|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN6034U341D3" accepted. 
+2024-08-19 09:36:19.9916|1|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN6034U341D3" started. 
+2024-08-19 09:36:19.9916|39|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN6034U341D4" accepted. 
+2024-08-19 09:36:19.9916|1|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN6034U341D4" started. 
+2024-08-19 09:36:19.9916|39|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN6034U341D5" accepted. 
+2024-08-19 09:36:19.9916|1|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN6034U341D5" started. 
+2024-08-19 09:36:19.9927|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:5284/swagger-ui.css - - - 
+2024-08-19 09:36:19.9927|2|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2024-08-19 09:36:19.9927|1000|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|No candidates found for the request path '/swagger-ui.css' 
+2024-08-19 09:36:19.9927|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:5284/swagger-ui-standalone-preset.js - - - 
+2024-08-19 09:36:19.9927|2|DEBUG|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|Request did not match any endpoints 
+2024-08-19 09:36:19.9927|2|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2024-08-19 09:36:19.9927|1000|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|No candidates found for the request path '/swagger-ui-standalone-preset.js' 
+2024-08-19 09:36:19.9927|2|DEBUG|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|Request did not match any endpoints 
+2024-08-19 09:36:19.9927|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:5284/swagger-ui-bundle.js - - - 
+2024-08-19 09:36:19.9927|2|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2024-08-19 09:36:19.9927|1000|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|No candidates found for the request path '/swagger-ui-bundle.js' 
+2024-08-19 09:36:19.9927|2|DEBUG|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|Request did not match any endpoints 
+2024-08-19 09:36:19.9939|0|TRACE|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Range header's value is empty. 
+2024-08-19 09:36:19.9939|0|TRACE|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Range header's value is empty. 
+2024-08-19 09:36:19.9939|0|TRACE|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Range header's value is empty. 
+2024-08-19 09:36:20.0220|2|INFO|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A' 
+2024-08-19 09:36:20.0228|2|INFO|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A' 
+2024-08-19 09:36:20.0240|9|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN6034U341D3" completed keep alive response. 
+2024-08-19 09:36:20.0240|9|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN6034U341D4" completed keep alive response. 
+2024-08-19 09:36:20.0240|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:5284/swagger-ui-standalone-preset.js - 200 230293 text/javascript 31.3105ms 
+2024-08-19 09:36:20.0240|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:5284/swagger-ui.css - 200 152034 text/css 31.3920ms 
+2024-08-19 09:36:20.0252|2|INFO|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A' 
+2024-08-19 09:36:20.0252|9|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN6034U341D5" completed keep alive response. 
+2024-08-19 09:36:20.0252|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:5284/swagger-ui-bundle.js - 200 1452753 text/javascript 32.1151ms 
+2024-08-19 09:36:20.2493|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:5284/swagger/v1/swagger.json - - - 
+2024-08-19 09:36:20.2493|2|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2024-08-19 09:36:20.2493|1000|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|No candidates found for the request path '/swagger/v1/swagger.json' 
+2024-08-19 09:36:20.2494|2|DEBUG|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|Request did not match any endpoints 
+2024-08-19 09:36:20.2817|9|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN6034U341D1" completed keep alive response. 
+2024-08-19 09:36:20.2817|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:5284/swagger/v1/swagger.json - 200 - application/json;charset=utf-8 32.4724ms 
+2024-08-19 09:36:35.2915|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 POST http://localhost:5284/api/SwiftMessage - multipart/form-data;+boundary=----WebKitFormBoundary5O9OA9oSISTkRQEc 887 
+2024-08-19 09:36:35.2923|2|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2024-08-19 09:36:35.2997|1001|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|1 candidate(s) found for the request path '/api/SwiftMessage' 
+2024-08-19 09:36:35.3022|1005|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|Endpoint 'SwiftMT799Api.Controllers.SwiftMessageController.UploadSwiftFile (SwiftMT799Api)' with route pattern 'api/SwiftMessage' is valid for the request path '/api/SwiftMessage' 
+2024-08-19 09:36:35.3031|1|DEBUG|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|Request matched endpoint 'SwiftMT799Api.Controllers.SwiftMessageController.UploadSwiftFile (SwiftMT799Api)' 
+2024-08-19 09:36:35.3037|8|TRACE|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|The endpoint does not specify the IRequestSizeLimitMetadata. 
+2024-08-19 09:36:35.3037|15|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Static files was skipped as the request already matched an endpoint. 
+2024-08-19 09:36:35.3055|3|WARN|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|Failed to determine the https port for redirect. 
+2024-08-19 09:36:35.3086|0|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'SwiftMT799Api.Controllers.SwiftMessageController.UploadSwiftFile (SwiftMT799Api)' 
+2024-08-19 09:36:35.3284|102|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "UploadSwiftFile", controller = "SwiftMessage"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult UploadSwiftFile(Microsoft.AspNetCore.Http.IFormFile) on controller SwiftMT799Api.Controllers.SwiftMessageController (SwiftMT799Api). 
+2024-08-19 09:36:35.3284|1|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of authorization filters (in the following order): None 
+2024-08-19 09:36:35.3284|1|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of resource filters (in the following order): Microsoft.AspNetCore.Mvc.ConsumesAttribute 
+2024-08-19 09:36:35.3295|1|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of action filters (in the following order): Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000), Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000) 
+2024-08-19 09:36:35.3295|1|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of exception filters (in the following order): None 
+2024-08-19 09:36:35.3295|1|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of result filters (in the following order): Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000) 
+2024-08-19 09:36:35.3295|52|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Resource Filter: Before executing OnResourceExecuting on filter Microsoft.AspNetCore.Mvc.ConsumesAttribute. 
+2024-08-19 09:36:35.3295|53|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Resource Filter: After executing OnResourceExecuting on filter Microsoft.AspNetCore.Mvc.ConsumesAttribute. 
+2024-08-19 09:36:35.3307|1|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing controller factory for controller SwiftMT799Api.Controllers.SwiftMessageController (SwiftMT799Api) 
+2024-08-19 09:36:35.3307|2|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed controller factory for controller SwiftMT799Api.Controllers.SwiftMessageController (SwiftMT799Api) 
+2024-08-19 09:36:35.3356|25|DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HN6034U341D1", Request id "0HN6034U341D1:00000004": started reading request body. 
+2024-08-19 09:36:35.3356|26|DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HN6034U341D1", Request id "0HN6034U341D1:00000004": done reading request body. 
+2024-08-19 09:36:35.3403|22|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Attempting to bind parameter 'file' of type 'Microsoft.AspNetCore.Http.IFormFile' ... 
+2024-08-19 09:36:35.3413|44|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinder|Attempting to bind parameter 'file' of type 'Microsoft.AspNetCore.Http.IFormFile' using the name 'file' in request data ... 
+2024-08-19 09:36:35.3421|45|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinder|Done attempting to bind parameter 'file' of type 'Microsoft.AspNetCore.Http.IFormFile'. 
+2024-08-19 09:36:35.3421|23|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Done attempting to bind parameter 'file' of type 'Microsoft.AspNetCore.Http.IFormFile'. 
+2024-08-19 09:36:35.3421|26|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Attempting to validate the bound parameter 'file' of type 'Microsoft.AspNetCore.Http.IFormFile' ... 
+2024-08-19 09:36:35.3454|27|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Done attempting to validate the bound parameter 'file' of type 'Microsoft.AspNetCore.Http.IFormFile'. 
+2024-08-19 09:36:35.3454|52|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2024-08-19 09:36:35.3464|53|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2024-08-19 09:36:35.3464|52|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2024-08-19 09:36:35.3464|53|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2024-08-19 09:36:35.3504|101|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing action method SwiftMT799Api.Controllers.SwiftMessageController.UploadSwiftFile (SwiftMT799Api) - Validation state: Valid 
+2024-08-19 09:36:35.3504|102|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing action method SwiftMT799Api.Controllers.SwiftMessageController.UploadSwiftFile (SwiftMT799Api) with arguments (Microsoft.AspNetCore.Http.FormFile) 
+2024-08-19 09:36:35.3504|0|INFO|SwiftMT799Api.Controllers.SwiftMessageController|UploadSwiftFile called 
+2024-08-19 09:36:35.3504|0|INFO|SwiftMT799Api.Controllers.SwiftMessageController|File content read successfully. 
+2024-08-19 09:36:35.3514|0|INFO|SwiftMT799Api.Controllers.SwiftMessageController|Parsing Swift MT799 message. 
+2024-08-19 09:36:35.3514|0|INFO|SwiftMT799Api.Controllers.SwiftMessageController|Parsing completed. 
+2024-08-19 09:36:35.3514|0|INFO|SwiftMT799Api.Controllers.SwiftMessageController|Field Reference: 67-C111111-KNTRL 
+2024-08-19 09:36:35.3514|0|INFO|SwiftMT799Api.Controllers.SwiftMessageController|Field RelatedReference: 30-111-1111111 
+2024-08-19 09:36:35.3514|0|INFO|SwiftMT799Api.Controllers.SwiftMessageController|Field Narrative: NA VNIMANIETO NA: OTDEL BANKOVI GARANTSII 
+2024-08-19 09:36:35.3668|0|INFO|SwiftMT799Api.Controllers.SwiftMessageController|Saving data to database. 
+2024-08-19 09:36:35.3668|0|INFO|SwiftMT799Api.Controllers.SwiftMessageController|SQLite Database Path: /Users/elizaognyanova/SwiftMT799Api/bin/Debug/net8.0/swift_messages.db 
+2024-08-19 09:36:35.3830|0|ERROR|SwiftMT799Api.Controllers.SwiftMessageController|General error occurred while saving data to the database. System.DllNotFoundException: Unable to load shared library 'SQLite.Interop.dll' or one of its dependencies. In order to help diagnose loading problems, consider setting the DYLD_PRINT_LIBRARIES environment variable: 
+dlopen(/usr/local/share/dotnet/shared/Microsoft.NETCore.App/8.0.8/SQLite.Interop.dll.dylib, 0x0001): tried: '/usr/local/share/dotnet/shared/Microsoft.NETCore.App/8.0.8/SQLite.Interop.dll.dylib' (no such file), '/System/Volumes/Preboot/Cryptexes/OS/usr/local/share/dotnet/shared/Microsoft.NETCore.App/8.0.8/SQLite.Interop.dll.dylib' (no such file), '/usr/local/share/dotnet/shared/Microsoft.NETCore.App/8.0.8/SQLite.Interop.dll.dylib' (no such file)
+dlopen(/Users/elizaognyanova/SwiftMT799Api/bin/Debug/net8.0/SQLite.Interop.dll.dylib, 0x0001): tried: '/Users/elizaognyanova/SwiftMT799Api/bin/Debug/net8.0/SQLite.Interop.dll.dylib' (no such file), '/System/Volumes/Preboot/Cryptexes/OS/Users/elizaognyanova/SwiftMT799Api/bin/Debug/net8.0/SQLite.Interop.dll.dylib' (no such file), '/Users/elizaognyanova/SwiftMT799Api/bin/Debug/net8.0/SQLite.Interop.dll.dylib' (no such file)
+dlopen(SQLite.Interop.dll.dylib, 0x0001): tried: 'SQLite.Interop.dll.dylib' (no such file), '/System/Volumes/Preboot/Cryptexes/OSSQLite.Interop.dll.dylib' (no such file), '/usr/lib/SQLite.Interop.dll.dylib' (no such file, not in dyld cache), 'SQLite.Interop.dll.dylib' (no such file), '/usr/local/lib/SQLite.Interop.dll.dylib' (no such file), '/usr/lib/SQLite.Interop.dll.dylib' (no such file, not in dyld cache)
+dlopen(/usr/local/share/dotnet/shared/Microsoft.NETCore.App/8.0.8/libSQLite.Interop.dll.dylib, 0x0001): tried: '/usr/local/share/dotnet/shared/Microsoft.NETCore.App/8.0.8/libSQLite.Interop.dll.dylib' (no such file), '/System/Volumes/Preboot/Cryptexes/OS/usr/local/share/dotnet/shared/Microsoft.NETCore.App/8.0.8/libSQLite.Interop.dll.dylib' (no such file), '/usr/local/share/dotnet/shared/Microsoft.NETCore.App/8.0.8/libSQLite.Interop.dll.dylib' (no such file)
+dlopen(/Users/elizaognyanova/SwiftMT799Api/bin/Debug/net8.0/libSQLite.Interop.dll.dylib, 0x0001): tried: '/Users/elizaognyanova/SwiftMT799Api/bin/Debug/net8.0/libSQLite.Interop.dll.dylib' (no such file), '/System/Volumes/Preboot/Cryptexes/OS/Users/elizaognyanova/SwiftMT799Api/bin/Debug/net8.0/libSQLite.Interop.dll.dylib' (no such file), '/Users/elizaognyanova/SwiftMT799Api/bin/Debug/net8.0/libSQLite.Interop.dll.dylib' (no such file)
+dlopen(libSQLite.Interop.dll.dylib, 0x0001): tried: 'libSQLite.Interop.dll.dylib' (no such file), '/System/Volumes/Preboot/Cryptexes/OSlibSQLite.Interop.dll.dylib' (no such file), '/usr/lib/libSQLite.Interop.dll.dylib' (no such file, not in dyld cache), 'libSQLite.Interop.dll.dylib' (no such file), '/usr/local/lib/libSQLite.Interop.dll.dylib' (no such file), '/usr/lib/libSQLite.Interop.dll.dylib' (no such file, not in dyld cache)
+dlopen(/usr/local/share/dotnet/shared/Microsoft.NETCore.App/8.0.8/SQLite.Interop.dll, 0x0001): tried: '/usr/local/share/dotnet/shared/Microsoft.NETCore.App/8.0.8/SQLite.Interop.dll' (no such file), '/System/Volumes/Preboot/Cryptexes/OS/usr/local/share/dotnet/shared/Microsoft.NETCore.App/8.0.8/SQLite.Interop.dll' (no such file), '/usr/local/share/dotnet/shared/Microsoft.NETCore.App/8.0.8/SQLite.Interop.dll' (no such file)
+dlopen(/Users/elizaognyanova/SwiftMT799Api/bin/Debug/net8.0/SQLite.Interop.dll, 0x0001): tried: '/Users/elizaognyanova/SwiftMT799Api/bin/Debug/net8.0/SQLite.Interop.dll' (no such file), '/System/Volumes/Preboot/Cryptexes/OS/Users/elizaognyanova/SwiftMT799Api/bin/Debug/net8.0/SQLite.Interop.dll' (no such file), '/Users/elizaognyanova/SwiftMT799Api/bin/Debug/net8.0/SQLite.Interop.dll' (no such file)
+dlopen(SQLite.Interop.dll, 0x0001): tried: 'SQLite.Interop.dll' (no such file), '/System/Volumes/Preboot/Cryptexes/OSSQLite.Interop.dll' (no such file), '/usr/lib/SQLite.Interop.dll' (no such file, not in dyld cache), 'SQLite.Interop.dll' (no such file), '/usr/local/lib/SQLite.Interop.dll' (no such file), '/usr/lib/SQLite.Interop.dll' (no such file, not in dyld cache)
+dlopen(/usr/local/share/dotnet/shared/Microsoft.NETCore.App/8.0.8/libSQLite.Interop.dll, 0x0001): tried: '/usr/local/share/dotnet/shared/Microsoft.NETCore.App/8.0.8/libSQLite.Interop.dll' (no such file), '/System/Volumes/Preboot/Cryptexes/OS/usr/local/share/dotnet/shared/Microsoft.NETCore.App/8.0.8/libSQLite.Interop.dll' (no such file), '/usr/local/share/dotnet/shared/Microsoft.NETCore.App/8.0.8/libSQLite.Interop.dll' (no such file)
+dlopen(/Users/elizaognyanova/SwiftMT799Api/bin/Debug/net8.0/libSQLite.Interop.dll, 0x0001): tried: '/Users/elizaognyanova/SwiftMT799Api/bin/Debug/net8.0/libSQLite.Interop.dll' (no such file), '/System/Volumes/Preboot/Cryptexes/OS/Users/elizaognyanova/SwiftMT799Api/bin/Debug/net8.0/libSQLite.Interop.dll' (no such file), '/Users/elizaognyanova/SwiftMT799Api/bin/Debug/net8.0/libSQLite.Interop.dll' (no such file)
+dlopen(libSQLite.Interop.dll, 0x0001): tried: 'libSQLite.Interop.dll' (no such file), '/System/Volumes/Preboot/Cryptexes/OSlibSQLite.Interop.dll' (no such file), '/usr/lib/libSQLite.Interop.dll' (no such file, not in dyld cache), 'libSQLite.Interop.dll' (no such file), '/usr/local/lib/libSQLite.Interop.dll' (no such file), '/usr/lib/libSQLite.Interop.dll' (no such file, not in dyld cache)
+
+   at System.Data.SQLite.UnsafeNativeMethods.sqlite3_config_none(SQLiteConfigOpsEnum op)
+   at System.Data.SQLite.SQLite3.StaticIsInitialized()
+   at System.Data.SQLite.SQLiteLog.PrivateInitialize(String className)
+   at System.Data.SQLite.SQLiteLog.Initialize(String className)
+   at System.Data.SQLite.SQLiteConnection..ctor(String connectionString, Boolean parseViaFramework)
+   at System.Data.SQLite.SQLiteConnection..ctor(String connectionString)
+   at SwiftMT799Api.Controllers.SwiftMessageController.SaveToDatabase(Dictionary`2 fields) in /Users/elizaognyanova/SwiftMT799Api/Controllers/SwiftMessageController.cs:line 135
+2024-08-19 09:36:35.3965|0|ERROR|SwiftMT799Api.Controllers.SwiftMessageController|Error occurred while saving data to the database. System.DllNotFoundException: Unable to load shared library 'SQLite.Interop.dll' or one of its dependencies. In order to help diagnose loading problems, consider setting the DYLD_PRINT_LIBRARIES environment variable: 
+dlopen(/usr/local/share/dotnet/shared/Microsoft.NETCore.App/8.0.8/SQLite.Interop.dll.dylib, 0x0001): tried: '/usr/local/share/dotnet/shared/Microsoft.NETCore.App/8.0.8/SQLite.Interop.dll.dylib' (no such file), '/System/Volumes/Preboot/Cryptexes/OS/usr/local/share/dotnet/shared/Microsoft.NETCore.App/8.0.8/SQLite.Interop.dll.dylib' (no such file), '/usr/local/share/dotnet/shared/Microsoft.NETCore.App/8.0.8/SQLite.Interop.dll.dylib' (no such file)
+dlopen(/Users/elizaognyanova/SwiftMT799Api/bin/Debug/net8.0/SQLite.Interop.dll.dylib, 0x0001): tried: '/Users/elizaognyanova/SwiftMT799Api/bin/Debug/net8.0/SQLite.Interop.dll.dylib' (no such file), '/System/Volumes/Preboot/Cryptexes/OS/Users/elizaognyanova/SwiftMT799Api/bin/Debug/net8.0/SQLite.Interop.dll.dylib' (no such file), '/Users/elizaognyanova/SwiftMT799Api/bin/Debug/net8.0/SQLite.Interop.dll.dylib' (no such file)
+dlopen(SQLite.Interop.dll.dylib, 0x0001): tried: 'SQLite.Interop.dll.dylib' (no such file), '/System/Volumes/Preboot/Cryptexes/OSSQLite.Interop.dll.dylib' (no such file), '/usr/lib/SQLite.Interop.dll.dylib' (no such file, not in dyld cache), 'SQLite.Interop.dll.dylib' (no such file), '/usr/local/lib/SQLite.Interop.dll.dylib' (no such file), '/usr/lib/SQLite.Interop.dll.dylib' (no such file, not in dyld cache)
+dlopen(/usr/local/share/dotnet/shared/Microsoft.NETCore.App/8.0.8/libSQLite.Interop.dll.dylib, 0x0001): tried: '/usr/local/share/dotnet/shared/Microsoft.NETCore.App/8.0.8/libSQLite.Interop.dll.dylib' (no such file), '/System/Volumes/Preboot/Cryptexes/OS/usr/local/share/dotnet/shared/Microsoft.NETCore.App/8.0.8/libSQLite.Interop.dll.dylib' (no such file), '/usr/local/share/dotnet/shared/Microsoft.NETCore.App/8.0.8/libSQLite.Interop.dll.dylib' (no such file)
+dlopen(/Users/elizaognyanova/SwiftMT799Api/bin/Debug/net8.0/libSQLite.Interop.dll.dylib, 0x0001): tried: '/Users/elizaognyanova/SwiftMT799Api/bin/Debug/net8.0/libSQLite.Interop.dll.dylib' (no such file), '/System/Volumes/Preboot/Cryptexes/OS/Users/elizaognyanova/SwiftMT799Api/bin/Debug/net8.0/libSQLite.Interop.dll.dylib' (no such file), '/Users/elizaognyanova/SwiftMT799Api/bin/Debug/net8.0/libSQLite.Interop.dll.dylib' (no such file)
+dlopen(libSQLite.Interop.dll.dylib, 0x0001): tried: 'libSQLite.Interop.dll.dylib' (no such file), '/System/Volumes/Preboot/Cryptexes/OSlibSQLite.Interop.dll.dylib' (no such file), '/usr/lib/libSQLite.Interop.dll.dylib' (no such file, not in dyld cache), 'libSQLite.Interop.dll.dylib' (no such file), '/usr/local/lib/libSQLite.Interop.dll.dylib' (no such file), '/usr/lib/libSQLite.Interop.dll.dylib' (no such file, not in dyld cache)
+dlopen(/usr/local/share/dotnet/shared/Microsoft.NETCore.App/8.0.8/SQLite.Interop.dll, 0x0001): tried: '/usr/local/share/dotnet/shared/Microsoft.NETCore.App/8.0.8/SQLite.Interop.dll' (no such file), '/System/Volumes/Preboot/Cryptexes/OS/usr/local/share/dotnet/shared/Microsoft.NETCore.App/8.0.8/SQLite.Interop.dll' (no such file), '/usr/local/share/dotnet/shared/Microsoft.NETCore.App/8.0.8/SQLite.Interop.dll' (no such file)
+dlopen(/Users/elizaognyanova/SwiftMT799Api/bin/Debug/net8.0/SQLite.Interop.dll, 0x0001): tried: '/Users/elizaognyanova/SwiftMT799Api/bin/Debug/net8.0/SQLite.Interop.dll' (no such file), '/System/Volumes/Preboot/Cryptexes/OS/Users/elizaognyanova/SwiftMT799Api/bin/Debug/net8.0/SQLite.Interop.dll' (no such file), '/Users/elizaognyanova/SwiftMT799Api/bin/Debug/net8.0/SQLite.Interop.dll' (no such file)
+dlopen(SQLite.Interop.dll, 0x0001): tried: 'SQLite.Interop.dll' (no such file), '/System/Volumes/Preboot/Cryptexes/OSSQLite.Interop.dll' (no such file), '/usr/lib/SQLite.Interop.dll' (no such file, not in dyld cache), 'SQLite.Interop.dll' (no such file), '/usr/local/lib/SQLite.Interop.dll' (no such file), '/usr/lib/SQLite.Interop.dll' (no such file, not in dyld cache)
+dlopen(/usr/local/share/dotnet/shared/Microsoft.NETCore.App/8.0.8/libSQLite.Interop.dll, 0x0001): tried: '/usr/local/share/dotnet/shared/Microsoft.NETCore.App/8.0.8/libSQLite.Interop.dll' (no such file), '/System/Volumes/Preboot/Cryptexes/OS/usr/local/share/dotnet/shared/Microsoft.NETCore.App/8.0.8/libSQLite.Interop.dll' (no such file), '/usr/local/share/dotnet/shared/Microsoft.NETCore.App/8.0.8/libSQLite.Interop.dll' (no such file)
+dlopen(/Users/elizaognyanova/SwiftMT799Api/bin/Debug/net8.0/libSQLite.Interop.dll, 0x0001): tried: '/Users/elizaognyanova/SwiftMT799Api/bin/Debug/net8.0/libSQLite.Interop.dll' (no such file), '/System/Volumes/Preboot/Cryptexes/OS/Users/elizaognyanova/SwiftMT799Api/bin/Debug/net8.0/libSQLite.Interop.dll' (no such file), '/Users/elizaognyanova/SwiftMT799Api/bin/Debug/net8.0/libSQLite.Interop.dll' (no such file)
+dlopen(libSQLite.Interop.dll, 0x0001): tried: 'libSQLite.Interop.dll' (no such file), '/System/Volumes/Preboot/Cryptexes/OSlibSQLite.Interop.dll' (no such file), '/usr/lib/libSQLite.Interop.dll' (no such file, not in dyld cache), 'libSQLite.Interop.dll' (no such file), '/usr/local/lib/libSQLite.Interop.dll' (no such file), '/usr/lib/libSQLite.Interop.dll' (no such file, not in dyld cache)
+
+   at System.Data.SQLite.UnsafeNativeMethods.sqlite3_config_none(SQLiteConfigOpsEnum op)
+   at System.Data.SQLite.SQLite3.StaticIsInitialized()
+   at System.Data.SQLite.SQLiteLog.PrivateInitialize(String className)
+   at System.Data.SQLite.SQLiteLog.Initialize(String className)
+   at System.Data.SQLite.SQLiteConnection..ctor(String connectionString, Boolean parseViaFramework)
+   at System.Data.SQLite.SQLiteConnection..ctor(String connectionString)
+   at SwiftMT799Api.Controllers.SwiftMessageController.SaveToDatabase(Dictionary`2 fields) in /Users/elizaognyanova/SwiftMT799Api/Controllers/SwiftMessageController.cs:line 135
+   at SwiftMT799Api.Controllers.SwiftMessageController.UploadSwiftFile(IFormFile file) in /Users/elizaognyanova/SwiftMT799Api/Controllers/SwiftMessageController.cs:line 71
+2024-08-19 09:36:35.3992|103|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action method SwiftMT799Api.Controllers.SwiftMessageController.UploadSwiftFile (SwiftMT799Api), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 46.1163ms. 
+2024-08-19 09:36:35.3992|52|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2024-08-19 09:36:35.3992|53|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2024-08-19 09:36:35.3992|52|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2024-08-19 09:36:35.3992|53|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2024-08-19 09:36:35.3992|52|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: Before executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2024-08-19 09:36:35.3993|53|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: After executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2024-08-19 09:36:35.3993|5|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Before executing action result Microsoft.AspNetCore.Mvc.ObjectResult. 
+2024-08-19 09:36:35.3993|11|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|List of registered output formatters, in the following order: Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter 
+2024-08-19 09:36:35.4004|4|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|No information found on request to perform content negotiation. 
+2024-08-19 09:36:35.4004|8|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|Attempting to select an output formatter without using a content type as no explicit content types were specified for the response. 
+2024-08-19 09:36:35.4004|10|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|Attempting to select the first formatter in the output formatters list which can write the result. 
+2024-08-19 09:36:35.4004|2|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter' and content type 'text/plain' to write the response. 
+2024-08-19 09:36:35.4004|1|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type 'System.String'. 
+2024-08-19 09:36:35.4004|6|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|After executing action result Microsoft.AspNetCore.Mvc.ObjectResult. 
+2024-08-19 09:36:35.4004|52|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: Before executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2024-08-19 09:36:35.4004|53|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: After executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2024-08-19 09:36:35.4004|52|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Resource Filter: Before executing OnResourceExecuted on filter Microsoft.AspNetCore.Mvc.ConsumesAttribute. 
+2024-08-19 09:36:35.4004|53|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Resource Filter: After executing OnResourceExecuted on filter Microsoft.AspNetCore.Mvc.ConsumesAttribute. 
+2024-08-19 09:36:35.4023|105|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action SwiftMT799Api.Controllers.SwiftMessageController.UploadSwiftFile (SwiftMT799Api) in 71.2572ms 
+2024-08-19 09:36:35.4023|1|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'SwiftMT799Api.Controllers.SwiftMessageController.UploadSwiftFile (SwiftMT799Api)' 
+2024-08-19 09:36:35.4023|9|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN6034U341D1" completed keep alive response. 
+2024-08-19 09:36:35.4023|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 POST http://localhost:5284/api/SwiftMessage - 500 - text/plain;+charset=utf-8 111.3714ms 
+2024-08-19 09:36:50.6101|6|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HN6034U341D2" received FIN. 
+2024-08-19 09:36:50.6117|7|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HN6034U341D2" sending FIN because: "The Socket transport's send loop completed gracefully." 
+2024-08-19 09:36:50.6117|6|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HN6034U341D3" received FIN. 
+2024-08-19 09:36:50.6125|10|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN6034U341D3" disconnecting. 
+2024-08-19 09:36:50.6137|2|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN6034U341D3" stopped. 
+2024-08-19 09:36:50.6162|6|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HN6034U341D4" received FIN. 
+2024-08-19 09:36:50.6164|7|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HN6034U341D3" sending FIN because: "The Socket transport's send loop completed gracefully." 
+2024-08-19 09:36:50.6186|6|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HN6034U341D5" received FIN. 
+2024-08-19 09:36:50.6186|7|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HN6034U341D4" sending FIN because: "The Socket transport's send loop completed gracefully." 
+2024-08-19 09:36:50.6186|10|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN6034U341D2" disconnecting. 
+2024-08-19 09:36:50.6186|10|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN6034U341D4" disconnecting. 
+2024-08-19 09:36:50.6186|2|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN6034U341D2" stopped. 
+2024-08-19 09:36:50.6186|10|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN6034U341D5" disconnecting. 
+2024-08-19 09:36:50.6186|7|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HN6034U341D5" sending FIN because: "The Socket transport's send loop completed gracefully." 
+2024-08-19 09:36:50.6186|2|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN6034U341D4" stopped. 
+2024-08-19 09:36:50.6186|2|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN6034U341D5" stopped. 
+2024-08-19 09:37:21.6142|6|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HN6034U341D1" received FIN. 
+2024-08-19 09:37:21.6167|7|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HN6034U341D1" sending FIN because: "The Socket transport's send loop completed gracefully." 
+2024-08-19 09:37:21.6167|10|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN6034U341D1" disconnecting. 
+2024-08-19 09:37:21.6172|2|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN6034U341D1" stopped. 
+2024-08-19 09:43:20.4470|0|DEBUG|SwiftMT799Api.Program|init main 
+2024-08-19 09:43:20.5604|12|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ModelBinderFactory|Registered model binder providers, in the following order: Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.TryParseModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider 
+2024-08-19 09:43:20.5753|1|DEBUG|Microsoft.Extensions.Hosting.Internal.Host|Hosting starting 
+2024-08-19 09:43:20.5985|11|ERROR|Microsoft.Extensions.Hosting.Internal.Host|Hosting failed to start System.IO.IOException: Failed to bind to address http://127.0.0.1:5284: address already in use.
+ ---> Microsoft.AspNetCore.Connections.AddressInUseException: Address already in use
+ ---> System.Net.Sockets.SocketException (48): Address already in use
+   at System.Net.Sockets.Socket.DoBind(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Bind(EndPoint localEP)
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketTransportOptions.CreateDefaultBoundListenSocket(EndPoint endpoint)
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketConnectionListener.Bind()
+   --- End of inner exception stack trace ---
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketConnectionListener.Bind()
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketTransportFactory.BindAsync(EndPoint endpoint, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Infrastructure.TransportManager.BindAsync(EndPoint endPoint, ConnectionDelegate connectionDelegate, EndpointConfig endpointConfig, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerImpl.<>c__DisplayClass28_0`1.<<StartAsync>g__OnBind|0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindEndpointAsync(ListenOptions endpoint, AddressBindContext context, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindEndpointAsync(ListenOptions endpoint, AddressBindContext context, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.LocalhostListenOptions.BindAsync(AddressBindContext context, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.AddressesStrategy.BindAsync(AddressBindContext context, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindAsync(ListenOptions[] listenOptions, AddressBindContext context, Func`2 useHttps, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerImpl.BindAsync(CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerImpl.StartAsync[TContext](IHttpApplication`1 application, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.Extensions.Hosting.Internal.Host.<StartAsync>b__15_1(IHostedService service, CancellationToken token)
+   at Microsoft.Extensions.Hosting.Internal.Host.ForeachService[T](IEnumerable`1 services, CancellationToken token, Boolean concurrent, Boolean abortOnFirstException, List`1 exceptions, Func`3 operation)
+2024-08-19 09:43:20.6053|0|ERROR|SwiftMT799Api.Program|Stopped program because of exception System.IO.IOException: Failed to bind to address http://127.0.0.1:5284: address already in use.
+ ---> Microsoft.AspNetCore.Connections.AddressInUseException: Address already in use
+ ---> System.Net.Sockets.SocketException (48): Address already in use
+   at System.Net.Sockets.Socket.DoBind(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Bind(EndPoint localEP)
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketTransportOptions.CreateDefaultBoundListenSocket(EndPoint endpoint)
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketConnectionListener.Bind()
+   --- End of inner exception stack trace ---
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketConnectionListener.Bind()
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketTransportFactory.BindAsync(EndPoint endpoint, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Infrastructure.TransportManager.BindAsync(EndPoint endPoint, ConnectionDelegate connectionDelegate, EndpointConfig endpointConfig, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerImpl.<>c__DisplayClass28_0`1.<<StartAsync>g__OnBind|0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindEndpointAsync(ListenOptions endpoint, AddressBindContext context, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindEndpointAsync(ListenOptions endpoint, AddressBindContext context, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.LocalhostListenOptions.BindAsync(AddressBindContext context, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.AddressesStrategy.BindAsync(AddressBindContext context, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindAsync(ListenOptions[] listenOptions, AddressBindContext context, Func`2 useHttps, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerImpl.BindAsync(CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerImpl.StartAsync[TContext](IHttpApplication`1 application, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.Extensions.Hosting.Internal.Host.<StartAsync>b__15_1(IHostedService service, CancellationToken token)
+   at Microsoft.Extensions.Hosting.Internal.Host.ForeachService[T](IEnumerable`1 services, CancellationToken token, Boolean concurrent, Boolean abortOnFirstException, List`1 exceptions, Func`3 operation)
+   at Microsoft.Extensions.Hosting.Internal.Host.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.RunAsync(IHost host, CancellationToken token)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.RunAsync(IHost host, CancellationToken token)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.Run(IHost host)
+   at Program.<Main>$(String[] args) in /Users/elizaognyanova/SwiftMT799Api/Program.cs:line 43
+2024-08-19 09:44:19.2287|0|DEBUG|SwiftMT799Api.Program|init main 
+2024-08-19 09:44:19.3058|12|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ModelBinderFactory|Registered model binder providers, in the following order: Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.TryParseModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider 
+2024-08-19 09:44:19.3180|1|DEBUG|Microsoft.Extensions.Hosting.Internal.Host|Hosting starting 
+2024-08-19 09:44:19.3326|14|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5284 
+2024-08-19 09:44:19.3353|13|DEBUG|Microsoft.AspNetCore.Hosting.Diagnostics|Loaded hosting startup assembly SwiftMT799Api 
+2024-08-19 09:44:19.3353|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2024-08-19 09:44:19.3353|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2024-08-19 09:44:19.3353|0|INFO|Microsoft.Hosting.Lifetime|Content root path: /Users/elizaognyanova/SwiftMT799Api 
+2024-08-19 09:44:19.3353|2|DEBUG|Microsoft.Extensions.Hosting.Internal.Host|Hosting started 
+2024-08-19 09:44:27.6065|39|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN6039FGN98T" accepted. 
+2024-08-19 09:44:27.6081|1|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN6039FGN98T" started. 
+2024-08-19 09:44:27.6710|39|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN6039FGN98U" accepted. 
+2024-08-19 09:44:27.6710|1|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN6039FGN98U" started. 
+2024-08-19 09:44:27.6821|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:5284/index.html - - - 
+2024-08-19 09:44:27.6829|0|DEBUG|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|Wildcard detected, all requests with hosts will be allowed. 
+2024-08-19 09:44:27.6829|2|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2024-08-19 09:44:27.6888|1000|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|No candidates found for the request path '/index.html' 
+2024-08-19 09:44:27.6888|2|DEBUG|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|Request did not match any endpoints 
+2024-08-19 09:44:27.7239|9|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN6039FGN98T" completed keep alive response. 
+2024-08-19 09:44:27.7246|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:5284/index.html - 200 - text/html;charset=utf-8 42.5730ms 
+2024-08-19 09:44:27.7269|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:5284/index.js - - - 
+2024-08-19 09:44:27.7269|2|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2024-08-19 09:44:27.7269|1000|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|No candidates found for the request path '/index.js' 
+2024-08-19 09:44:27.7269|2|DEBUG|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|Request did not match any endpoints 
+2024-08-19 09:44:27.7277|9|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN6039FGN98T" completed keep alive response. 
+2024-08-19 09:44:27.7277|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:5284/index.js - 200 - application/javascript;charset=utf-8 0.8914ms 
+2024-08-19 09:44:27.8990|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:5284/swagger/v1/swagger.json - - - 
+2024-08-19 09:44:27.8990|2|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2024-08-19 09:44:27.8990|1000|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|No candidates found for the request path '/swagger/v1/swagger.json' 
+2024-08-19 09:44:27.8990|2|DEBUG|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|Request did not match any endpoints 
+2024-08-19 09:44:27.9390|9|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN6039FGN98T" completed keep alive response. 
+2024-08-19 09:44:27.9390|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:5284/swagger/v1/swagger.json - 200 - application/json;charset=utf-8 40.1775ms 
+2024-08-19 09:44:36.0109|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 POST http://localhost:5284/api/SwiftMessage - multipart/form-data;+boundary=----WebKitFormBoundaryO5tzBNC182q1el4a 887 
+2024-08-19 09:44:36.0119|2|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2024-08-19 09:44:36.0202|1001|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|1 candidate(s) found for the request path '/api/SwiftMessage' 
+2024-08-19 09:44:36.0220|1005|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|Endpoint 'SwiftMT799Api.Controllers.SwiftMessageController.UploadSwiftFile (SwiftMT799Api)' with route pattern 'api/SwiftMessage' is valid for the request path '/api/SwiftMessage' 
+2024-08-19 09:44:36.0228|1|DEBUG|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|Request matched endpoint 'SwiftMT799Api.Controllers.SwiftMessageController.UploadSwiftFile (SwiftMT799Api)' 
+2024-08-19 09:44:36.0233|8|TRACE|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|The endpoint does not specify the IRequestSizeLimitMetadata. 
+2024-08-19 09:44:36.0233|15|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Static files was skipped as the request already matched an endpoint. 
+2024-08-19 09:44:36.0251|3|WARN|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|Failed to determine the https port for redirect. 
+2024-08-19 09:44:36.0276|0|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'SwiftMT799Api.Controllers.SwiftMessageController.UploadSwiftFile (SwiftMT799Api)' 
+2024-08-19 09:44:36.0430|102|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "UploadSwiftFile", controller = "SwiftMessage"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult UploadSwiftFile(Microsoft.AspNetCore.Http.IFormFile) on controller SwiftMT799Api.Controllers.SwiftMessageController (SwiftMT799Api). 
+2024-08-19 09:44:36.0446|1|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of authorization filters (in the following order): None 
+2024-08-19 09:44:36.0446|1|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of resource filters (in the following order): Microsoft.AspNetCore.Mvc.ConsumesAttribute 
+2024-08-19 09:44:36.0454|1|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of action filters (in the following order): Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000), Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000) 
+2024-08-19 09:44:36.0454|1|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of exception filters (in the following order): None 
+2024-08-19 09:44:36.0454|1|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of result filters (in the following order): Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000) 
+2024-08-19 09:44:36.0454|52|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Resource Filter: Before executing OnResourceExecuting on filter Microsoft.AspNetCore.Mvc.ConsumesAttribute. 
+2024-08-19 09:44:36.0454|53|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Resource Filter: After executing OnResourceExecuting on filter Microsoft.AspNetCore.Mvc.ConsumesAttribute. 
+2024-08-19 09:44:36.0469|1|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing controller factory for controller SwiftMT799Api.Controllers.SwiftMessageController (SwiftMT799Api) 
+2024-08-19 09:44:36.0469|2|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed controller factory for controller SwiftMT799Api.Controllers.SwiftMessageController (SwiftMT799Api) 
+2024-08-19 09:44:36.0508|25|DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HN6039FGN98T", Request id "0HN6039FGN98T:00000004": started reading request body. 
+2024-08-19 09:44:36.0508|26|DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HN6039FGN98T", Request id "0HN6039FGN98T:00000004": done reading request body. 
+2024-08-19 09:44:36.0554|22|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Attempting to bind parameter 'file' of type 'Microsoft.AspNetCore.Http.IFormFile' ... 
+2024-08-19 09:44:36.0565|44|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinder|Attempting to bind parameter 'file' of type 'Microsoft.AspNetCore.Http.IFormFile' using the name 'file' in request data ... 
+2024-08-19 09:44:36.0565|45|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinder|Done attempting to bind parameter 'file' of type 'Microsoft.AspNetCore.Http.IFormFile'. 
+2024-08-19 09:44:36.0565|23|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Done attempting to bind parameter 'file' of type 'Microsoft.AspNetCore.Http.IFormFile'. 
+2024-08-19 09:44:36.0565|26|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Attempting to validate the bound parameter 'file' of type 'Microsoft.AspNetCore.Http.IFormFile' ... 
+2024-08-19 09:44:36.0612|27|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Done attempting to validate the bound parameter 'file' of type 'Microsoft.AspNetCore.Http.IFormFile'. 
+2024-08-19 09:44:36.0622|52|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2024-08-19 09:44:36.0623|53|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2024-08-19 09:44:36.0623|52|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2024-08-19 09:44:36.0623|53|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2024-08-19 09:44:36.0690|101|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing action method SwiftMT799Api.Controllers.SwiftMessageController.UploadSwiftFile (SwiftMT799Api) - Validation state: Valid 
+2024-08-19 09:44:36.0693|102|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing action method SwiftMT799Api.Controllers.SwiftMessageController.UploadSwiftFile (SwiftMT799Api) with arguments (Microsoft.AspNetCore.Http.FormFile) 
+2024-08-19 09:44:36.0693|0|INFO|SwiftMT799Api.Controllers.SwiftMessageController|UploadSwiftFile called 
+2024-08-19 09:44:36.0704|0|INFO|SwiftMT799Api.Controllers.SwiftMessageController|File content read successfully. 
+2024-08-19 09:44:36.0704|0|INFO|SwiftMT799Api.Controllers.SwiftMessageController|Parsing Swift MT799 message. 
+2024-08-19 09:44:36.0704|0|INFO|SwiftMT799Api.Controllers.SwiftMessageController|Parsing completed. 
+2024-08-19 09:44:36.0704|0|INFO|SwiftMT799Api.Controllers.SwiftMessageController|Field Reference: 67-C111111-KNTRL 
+2024-08-19 09:44:36.0704|0|INFO|SwiftMT799Api.Controllers.SwiftMessageController|Field RelatedReference: 30-111-1111111 
+2024-08-19 09:44:36.0704|0|INFO|SwiftMT799Api.Controllers.SwiftMessageController|Field Narrative: NA VNIMANIETO NA: OTDEL BANKOVI GARANTSII 
+2024-08-19 09:44:36.0777|0|INFO|SwiftMT799Api.Controllers.SwiftMessageController|Saving data to database. 
+2024-08-19 09:44:36.0777|0|INFO|SwiftMT799Api.Controllers.SwiftMessageController|SQLite Database Path: /Users/elizaognyanova/SwiftMT799Api/bin/Debug/net8.0/swift_messages.db 
+2024-08-19 09:44:36.3549|0|INFO|SwiftMT799Api.Controllers.SwiftMessageController|Database connection opened successfully. 
+2024-08-19 09:44:36.3613|0|INFO|SwiftMT799Api.Controllers.SwiftMessageController|Table created or already exists. 
+2024-08-19 09:44:36.3641|0|INFO|SwiftMT799Api.Controllers.SwiftMessageController|Data saved to database successfully. 
+2024-08-19 09:44:36.3649|0|INFO|SwiftMT799Api.Controllers.SwiftMessageController|File processed and data saved successfully. 
+2024-08-19 09:44:36.3687|103|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action method SwiftMT799Api.Controllers.SwiftMessageController.UploadSwiftFile (SwiftMT799Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 295.5709ms. 
+2024-08-19 09:44:36.3687|52|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2024-08-19 09:44:36.3687|53|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2024-08-19 09:44:36.3687|52|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2024-08-19 09:44:36.3687|53|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2024-08-19 09:44:36.3687|52|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: Before executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2024-08-19 09:44:36.3687|53|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: After executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2024-08-19 09:44:36.3687|5|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Before executing action result Microsoft.AspNetCore.Mvc.OkObjectResult. 
+2024-08-19 09:44:36.3698|11|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|List of registered output formatters, in the following order: Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter 
+2024-08-19 09:44:36.3703|4|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|No information found on request to perform content negotiation. 
+2024-08-19 09:44:36.3703|8|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|Attempting to select an output formatter without using a content type as no explicit content types were specified for the response. 
+2024-08-19 09:44:36.3703|10|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|Attempting to select the first formatter in the output formatters list which can write the result. 
+2024-08-19 09:44:36.3703|2|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter' and content type 'text/plain' to write the response. 
+2024-08-19 09:44:36.3703|1|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing OkObjectResult, writing value of type 'System.String'. 
+2024-08-19 09:44:36.3703|6|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|After executing action result Microsoft.AspNetCore.Mvc.OkObjectResult. 
+2024-08-19 09:44:36.3703|52|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: Before executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2024-08-19 09:44:36.3703|53|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: After executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2024-08-19 09:44:36.3703|52|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Resource Filter: Before executing OnResourceExecuted on filter Microsoft.AspNetCore.Mvc.ConsumesAttribute. 
+2024-08-19 09:44:36.3703|53|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Resource Filter: After executing OnResourceExecuted on filter Microsoft.AspNetCore.Mvc.ConsumesAttribute. 
+2024-08-19 09:44:36.3730|105|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action SwiftMT799Api.Controllers.SwiftMessageController.UploadSwiftFile (SwiftMT799Api) in 325.4654ms 
+2024-08-19 09:44:36.3730|1|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'SwiftMT799Api.Controllers.SwiftMessageController.UploadSwiftFile (SwiftMT799Api)' 
+2024-08-19 09:44:36.3730|9|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN6039FGN98T" completed keep alive response. 
+2024-08-19 09:44:36.3735|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 POST http://localhost:5284/api/SwiftMessage - 200 - text/plain;+charset=utf-8 363.1717ms 
+2024-08-19 09:44:58.5947|6|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HN6039FGN98U" received FIN. 
+2024-08-19 09:44:58.5985|7|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HN6039FGN98U" sending FIN because: "The Socket transport's send loop completed gracefully." 
+2024-08-19 09:44:58.6069|10|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN6039FGN98U" disconnecting. 
+2024-08-19 09:44:58.6091|2|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN6039FGN98U" stopped. 
+2024-08-19 09:45:29.5926|6|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HN6039FGN98T" received FIN. 
+2024-08-19 09:45:29.5961|7|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HN6039FGN98T" sending FIN because: "The Socket transport's send loop completed gracefully." 
+2024-08-19 09:45:29.5961|10|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN6039FGN98T" disconnecting. 
+2024-08-19 09:45:29.5971|2|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN6039FGN98T" stopped. 
+2024-08-19 09:54:44.8208|39|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN6039FGN98V" accepted. 
+2024-08-19 09:54:44.8224|1|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN6039FGN98V" started. 
+2024-08-19 09:54:44.8821|39|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN6039FGN990" accepted. 
+2024-08-19 09:54:44.8821|1|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN6039FGN990" started. 
+2024-08-19 09:54:44.8904|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:5284/index.html - - - 
+2024-08-19 09:54:44.8904|2|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2024-08-19 09:54:44.8907|1000|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|No candidates found for the request path '/index.html' 
+2024-08-19 09:54:44.8907|2|DEBUG|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|Request did not match any endpoints 
+2024-08-19 09:54:44.8964|9|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN6039FGN98V" completed keep alive response. 
+2024-08-19 09:54:44.8964|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:5284/index.html - 200 - text/html;charset=utf-8 6.1577ms 
+2024-08-19 09:54:44.8997|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:5284/index.js - - - 
+2024-08-19 09:54:44.8997|2|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2024-08-19 09:54:44.8997|1000|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|No candidates found for the request path '/index.js' 
+2024-08-19 09:54:44.8997|2|DEBUG|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|Request did not match any endpoints 
+2024-08-19 09:54:44.8997|9|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN6039FGN990" completed keep alive response. 
+2024-08-19 09:54:44.8997|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:5284/index.js - 200 - application/javascript;charset=utf-8 0.2175ms 
+2024-08-19 09:54:45.1154|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:5284/swagger/v1/swagger.json - - - 
+2024-08-19 09:54:45.1154|2|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2024-08-19 09:54:45.1154|1000|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|No candidates found for the request path '/swagger/v1/swagger.json' 
+2024-08-19 09:54:45.1154|2|DEBUG|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|Request did not match any endpoints 
+2024-08-19 09:54:45.1410|9|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN6039FGN98V" completed keep alive response. 
+2024-08-19 09:54:45.1410|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:5284/swagger/v1/swagger.json - 200 - application/json;charset=utf-8 25.7132ms 
+2024-08-19 09:54:52.1951|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 POST http://localhost:5284/api/SwiftMessage - multipart/form-data;+boundary=----WebKitFormBoundaryy8Ij8PATHMKBq3wm 887 
+2024-08-19 09:54:52.1958|2|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2024-08-19 09:54:52.1966|1001|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|1 candidate(s) found for the request path '/api/SwiftMessage' 
+2024-08-19 09:54:52.1966|1005|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|Endpoint 'SwiftMT799Api.Controllers.SwiftMessageController.UploadSwiftFile (SwiftMT799Api)' with route pattern 'api/SwiftMessage' is valid for the request path '/api/SwiftMessage' 
+2024-08-19 09:54:52.1977|1|DEBUG|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|Request matched endpoint 'SwiftMT799Api.Controllers.SwiftMessageController.UploadSwiftFile (SwiftMT799Api)' 
+2024-08-19 09:54:52.1977|8|TRACE|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|The endpoint does not specify the IRequestSizeLimitMetadata. 
+2024-08-19 09:54:52.1990|15|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Static files was skipped as the request already matched an endpoint. 
+2024-08-19 09:54:52.2010|0|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'SwiftMT799Api.Controllers.SwiftMessageController.UploadSwiftFile (SwiftMT799Api)' 
+2024-08-19 09:54:52.2042|102|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "UploadSwiftFile", controller = "SwiftMessage"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult UploadSwiftFile(Microsoft.AspNetCore.Http.IFormFile) on controller SwiftMT799Api.Controllers.SwiftMessageController (SwiftMT799Api). 
+2024-08-19 09:54:52.2042|1|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of authorization filters (in the following order): None 
+2024-08-19 09:54:52.2042|1|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of resource filters (in the following order): Microsoft.AspNetCore.Mvc.ConsumesAttribute 
+2024-08-19 09:54:52.2042|1|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of action filters (in the following order): Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000), Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000) 
+2024-08-19 09:54:52.2046|1|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of exception filters (in the following order): None 
+2024-08-19 09:54:52.2046|1|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of result filters (in the following order): Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000) 
+2024-08-19 09:54:52.2046|52|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Resource Filter: Before executing OnResourceExecuting on filter Microsoft.AspNetCore.Mvc.ConsumesAttribute. 
+2024-08-19 09:54:52.2046|53|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Resource Filter: After executing OnResourceExecuting on filter Microsoft.AspNetCore.Mvc.ConsumesAttribute. 
+2024-08-19 09:54:52.2046|1|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing controller factory for controller SwiftMT799Api.Controllers.SwiftMessageController (SwiftMT799Api) 
+2024-08-19 09:54:52.2046|2|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed controller factory for controller SwiftMT799Api.Controllers.SwiftMessageController (SwiftMT799Api) 
+2024-08-19 09:54:52.2062|25|DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HN6039FGN98V", Request id "0HN6039FGN98V:00000003": started reading request body. 
+2024-08-19 09:54:52.2062|26|DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HN6039FGN98V", Request id "0HN6039FGN98V:00000003": done reading request body. 
+2024-08-19 09:54:52.2085|22|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Attempting to bind parameter 'file' of type 'Microsoft.AspNetCore.Http.IFormFile' ... 
+2024-08-19 09:54:52.2092|44|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinder|Attempting to bind parameter 'file' of type 'Microsoft.AspNetCore.Http.IFormFile' using the name 'file' in request data ... 
+2024-08-19 09:54:52.2092|45|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinder|Done attempting to bind parameter 'file' of type 'Microsoft.AspNetCore.Http.IFormFile'. 
+2024-08-19 09:54:52.2092|23|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Done attempting to bind parameter 'file' of type 'Microsoft.AspNetCore.Http.IFormFile'. 
+2024-08-19 09:54:52.2092|26|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Attempting to validate the bound parameter 'file' of type 'Microsoft.AspNetCore.Http.IFormFile' ... 
+2024-08-19 09:54:52.2105|27|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Done attempting to validate the bound parameter 'file' of type 'Microsoft.AspNetCore.Http.IFormFile'. 
+2024-08-19 09:54:52.2105|52|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2024-08-19 09:54:52.2106|53|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2024-08-19 09:54:52.2106|52|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2024-08-19 09:54:52.2106|53|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2024-08-19 09:54:52.2106|101|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing action method SwiftMT799Api.Controllers.SwiftMessageController.UploadSwiftFile (SwiftMT799Api) - Validation state: Valid 
+2024-08-19 09:54:52.2106|102|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing action method SwiftMT799Api.Controllers.SwiftMessageController.UploadSwiftFile (SwiftMT799Api) with arguments (Microsoft.AspNetCore.Http.FormFile) 
+2024-08-19 09:54:52.2106|0|INFO|SwiftMT799Api.Controllers.SwiftMessageController|UploadSwiftFile called 
+2024-08-19 09:54:52.2106|0|INFO|SwiftMT799Api.Controllers.SwiftMessageController|File content read successfully. 
+2024-08-19 09:54:52.2106|0|INFO|SwiftMT799Api.Controllers.SwiftMessageController|Parsing Swift MT799 message. 
+2024-08-19 09:54:52.2106|0|INFO|SwiftMT799Api.Controllers.SwiftMessageController|Parsing completed. 
+2024-08-19 09:54:52.2106|0|INFO|SwiftMT799Api.Controllers.SwiftMessageController|Field Reference: 67-C111111-KNTRL 
+2024-08-19 09:54:52.2106|0|INFO|SwiftMT799Api.Controllers.SwiftMessageController|Field RelatedReference: 30-111-1111111 
+2024-08-19 09:54:52.2106|0|INFO|SwiftMT799Api.Controllers.SwiftMessageController|Field Narrative: NA VNIMANIETO NA: OTDEL BANKOVI GARANTSII 
+2024-08-19 09:54:52.2106|0|INFO|SwiftMT799Api.Controllers.SwiftMessageController|Saving data to database. 
+2024-08-19 09:54:52.2106|0|INFO|SwiftMT799Api.Controllers.SwiftMessageController|SQLite Database Path: /Users/elizaognyanova/SwiftMT799Api/bin/Debug/net8.0/swift_messages.db 
+2024-08-19 09:54:52.2151|0|INFO|SwiftMT799Api.Controllers.SwiftMessageController|Database connection opened successfully. 
+2024-08-19 09:54:52.2162|0|INFO|SwiftMT799Api.Controllers.SwiftMessageController|Table created or already exists. 
+2024-08-19 09:54:52.2170|0|INFO|SwiftMT799Api.Controllers.SwiftMessageController|Data saved to database successfully. 
+2024-08-19 09:54:52.2170|0|INFO|SwiftMT799Api.Controllers.SwiftMessageController|File processed and data saved successfully. 
+2024-08-19 09:54:52.2170|103|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action method SwiftMT799Api.Controllers.SwiftMessageController.UploadSwiftFile (SwiftMT799Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 6.2349ms. 
+2024-08-19 09:54:52.2170|52|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2024-08-19 09:54:52.2170|53|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2024-08-19 09:54:52.2170|52|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2024-08-19 09:54:52.2170|53|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2024-08-19 09:54:52.2170|52|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: Before executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2024-08-19 09:54:52.2170|53|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: After executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2024-08-19 09:54:52.2170|5|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Before executing action result Microsoft.AspNetCore.Mvc.OkObjectResult. 
+2024-08-19 09:54:52.2182|11|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|List of registered output formatters, in the following order: Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter 
+2024-08-19 09:54:52.2182|4|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|No information found on request to perform content negotiation. 
+2024-08-19 09:54:52.2182|8|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|Attempting to select an output formatter without using a content type as no explicit content types were specified for the response. 
+2024-08-19 09:54:52.2182|10|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|Attempting to select the first formatter in the output formatters list which can write the result. 
+2024-08-19 09:54:52.2182|2|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter' and content type 'text/plain' to write the response. 
+2024-08-19 09:54:52.2182|1|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing OkObjectResult, writing value of type 'System.String'. 
+2024-08-19 09:54:52.2182|6|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|After executing action result Microsoft.AspNetCore.Mvc.OkObjectResult. 
+2024-08-19 09:54:52.2182|52|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: Before executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2024-08-19 09:54:52.2182|53|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: After executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2024-08-19 09:54:52.2182|52|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Resource Filter: Before executing OnResourceExecuted on filter Microsoft.AspNetCore.Mvc.ConsumesAttribute. 
+2024-08-19 09:54:52.2182|53|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Resource Filter: After executing OnResourceExecuted on filter Microsoft.AspNetCore.Mvc.ConsumesAttribute. 
+2024-08-19 09:54:52.2182|105|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action SwiftMT799Api.Controllers.SwiftMessageController.UploadSwiftFile (SwiftMT799Api) in 13.8527ms 
+2024-08-19 09:54:52.2182|1|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'SwiftMT799Api.Controllers.SwiftMessageController.UploadSwiftFile (SwiftMT799Api)' 
+2024-08-19 09:54:52.2182|9|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN6039FGN98V" completed keep alive response. 
+2024-08-19 09:54:52.2187|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 POST http://localhost:5284/api/SwiftMessage - 200 - text/plain;+charset=utf-8 24.1147ms 
+2024-08-19 09:55:15.7973|6|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HN6039FGN990" received FIN. 
+2024-08-19 09:55:15.7999|7|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HN6039FGN990" sending FIN because: "The Socket transport's send loop completed gracefully." 
+2024-08-19 09:55:15.7999|10|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN6039FGN990" disconnecting. 
+2024-08-19 09:55:15.8006|2|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN6039FGN990" stopped. 
+2024-08-19 09:55:46.7976|6|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HN6039FGN98V" received FIN. 
+2024-08-19 09:55:46.8004|10|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN6039FGN98V" disconnecting. 
+2024-08-19 09:55:46.8005|7|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HN6039FGN98V" sending FIN because: "The Socket transport's send loop completed gracefully." 
+2024-08-19 09:55:46.8005|2|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN6039FGN98V" stopped. 
+2024-08-19 10:15:06.7992|39|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN6039FGN991" accepted. 
+2024-08-19 10:15:06.7992|1|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN6039FGN991" started. 
+2024-08-19 10:15:06.8077|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:5284/index.html - - - 
+2024-08-19 10:15:06.8077|2|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2024-08-19 10:15:06.8089|1000|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|No candidates found for the request path '/index.html' 
+2024-08-19 10:15:06.8089|2|DEBUG|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|Request did not match any endpoints 
+2024-08-19 10:15:06.8215|9|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN6039FGN991" completed keep alive response. 
+2024-08-19 10:15:06.8227|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:5284/index.html - 200 - text/html;charset=utf-8 14.5987ms 
+2024-08-19 10:15:06.9917|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:5284/index.js - - - 
+2024-08-19 10:15:06.9917|2|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2024-08-19 10:15:06.9917|1000|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|No candidates found for the request path '/index.js' 
+2024-08-19 10:15:06.9917|2|DEBUG|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|Request did not match any endpoints 
+2024-08-19 10:15:06.9926|9|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN6039FGN991" completed keep alive response. 
+2024-08-19 10:15:06.9926|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:5284/index.js - 200 - application/javascript;charset=utf-8 1.0541ms 
+2024-08-19 10:15:07.0471|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:5284/swagger/v1/swagger.json - - - 
+2024-08-19 10:15:07.0472|2|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2024-08-19 10:15:07.0472|1000|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|No candidates found for the request path '/swagger/v1/swagger.json' 
+2024-08-19 10:15:07.0472|2|DEBUG|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|Request did not match any endpoints 
+2024-08-19 10:15:07.0540|9|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN6039FGN991" completed keep alive response. 
+2024-08-19 10:15:07.0542|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:5284/swagger/v1/swagger.json - 200 - application/json;charset=utf-8 7.0519ms 
+2024-08-19 10:15:14.4054|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 POST http://localhost:5284/api/SwiftMessage - multipart/form-data;+boundary=----WebKitFormBoundary88oYWbZg7wL6TXiw 887 
+2024-08-19 10:15:14.4054|2|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2024-08-19 10:15:14.4066|1001|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|1 candidate(s) found for the request path '/api/SwiftMessage' 
+2024-08-19 10:15:14.4066|1005|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|Endpoint 'SwiftMT799Api.Controllers.SwiftMessageController.UploadSwiftFile (SwiftMT799Api)' with route pattern 'api/SwiftMessage' is valid for the request path '/api/SwiftMessage' 
+2024-08-19 10:15:14.4072|1|DEBUG|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|Request matched endpoint 'SwiftMT799Api.Controllers.SwiftMessageController.UploadSwiftFile (SwiftMT799Api)' 
+2024-08-19 10:15:14.4072|8|TRACE|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|The endpoint does not specify the IRequestSizeLimitMetadata. 
+2024-08-19 10:15:14.4072|15|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Static files was skipped as the request already matched an endpoint. 
+2024-08-19 10:15:14.4086|0|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'SwiftMT799Api.Controllers.SwiftMessageController.UploadSwiftFile (SwiftMT799Api)' 
+2024-08-19 10:15:14.4101|102|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "UploadSwiftFile", controller = "SwiftMessage"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult UploadSwiftFile(Microsoft.AspNetCore.Http.IFormFile) on controller SwiftMT799Api.Controllers.SwiftMessageController (SwiftMT799Api). 
+2024-08-19 10:15:14.4101|1|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of authorization filters (in the following order): None 
+2024-08-19 10:15:14.4101|1|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of resource filters (in the following order): Microsoft.AspNetCore.Mvc.ConsumesAttribute 
+2024-08-19 10:15:14.4101|1|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of action filters (in the following order): Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000), Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000) 
+2024-08-19 10:15:14.4138|1|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of exception filters (in the following order): None 
+2024-08-19 10:15:14.4138|1|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of result filters (in the following order): Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000) 
+2024-08-19 10:15:14.4138|52|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Resource Filter: Before executing OnResourceExecuting on filter Microsoft.AspNetCore.Mvc.ConsumesAttribute. 
+2024-08-19 10:15:14.4145|53|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Resource Filter: After executing OnResourceExecuting on filter Microsoft.AspNetCore.Mvc.ConsumesAttribute. 
+2024-08-19 10:15:14.4145|1|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing controller factory for controller SwiftMT799Api.Controllers.SwiftMessageController (SwiftMT799Api) 
+2024-08-19 10:15:14.4145|2|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed controller factory for controller SwiftMT799Api.Controllers.SwiftMessageController (SwiftMT799Api) 
+2024-08-19 10:15:14.4157|25|DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HN6039FGN991", Request id "0HN6039FGN991:00000004": started reading request body. 
+2024-08-19 10:15:14.4157|26|DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HN6039FGN991", Request id "0HN6039FGN991:00000004": done reading request body. 
+2024-08-19 10:15:14.4165|22|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Attempting to bind parameter 'file' of type 'Microsoft.AspNetCore.Http.IFormFile' ... 
+2024-08-19 10:15:14.4165|44|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinder|Attempting to bind parameter 'file' of type 'Microsoft.AspNetCore.Http.IFormFile' using the name 'file' in request data ... 
+2024-08-19 10:15:14.4165|45|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinder|Done attempting to bind parameter 'file' of type 'Microsoft.AspNetCore.Http.IFormFile'. 
+2024-08-19 10:15:14.4165|23|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Done attempting to bind parameter 'file' of type 'Microsoft.AspNetCore.Http.IFormFile'. 
+2024-08-19 10:15:14.4165|26|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Attempting to validate the bound parameter 'file' of type 'Microsoft.AspNetCore.Http.IFormFile' ... 
+2024-08-19 10:15:14.4174|27|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Done attempting to validate the bound parameter 'file' of type 'Microsoft.AspNetCore.Http.IFormFile'. 
+2024-08-19 10:15:14.4174|52|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2024-08-19 10:15:14.4174|53|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2024-08-19 10:15:14.4174|52|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2024-08-19 10:15:14.4174|53|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2024-08-19 10:15:14.4174|101|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing action method SwiftMT799Api.Controllers.SwiftMessageController.UploadSwiftFile (SwiftMT799Api) - Validation state: Valid 
+2024-08-19 10:15:14.4174|102|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing action method SwiftMT799Api.Controllers.SwiftMessageController.UploadSwiftFile (SwiftMT799Api) with arguments (Microsoft.AspNetCore.Http.FormFile) 
+2024-08-19 10:15:14.4174|0|INFO|SwiftMT799Api.Controllers.SwiftMessageController|UploadSwiftFile called 
+2024-08-19 10:15:14.4174|0|INFO|SwiftMT799Api.Controllers.SwiftMessageController|File content read successfully. 
+2024-08-19 10:15:14.4174|0|INFO|SwiftMT799Api.Controllers.SwiftMessageController|Parsing Swift MT799 message. 
+2024-08-19 10:15:14.4182|0|INFO|SwiftMT799Api.Controllers.SwiftMessageController|Parsing completed. 
+2024-08-19 10:15:14.4182|0|INFO|SwiftMT799Api.Controllers.SwiftMessageController|Field Reference: 67-C111111-KNTRL 
+2024-08-19 10:15:14.4182|0|INFO|SwiftMT799Api.Controllers.SwiftMessageController|Field RelatedReference: 30-111-1111111 
+2024-08-19 10:15:14.4182|0|INFO|SwiftMT799Api.Controllers.SwiftMessageController|Field Narrative: NA VNIMANIETO NA: OTDEL BANKOVI GARANTSII 
+2024-08-19 10:15:14.4182|0|INFO|SwiftMT799Api.Controllers.SwiftMessageController|Saving data to database. 
+2024-08-19 10:15:14.4182|0|INFO|SwiftMT799Api.Controllers.SwiftMessageController|SQLite Database Path: /Users/elizaognyanova/SwiftMT799Api/bin/Debug/net8.0/swift_messages.db 
+2024-08-19 10:15:14.4233|0|INFO|SwiftMT799Api.Controllers.SwiftMessageController|Database connection opened successfully. 
+2024-08-19 10:15:14.4246|0|INFO|SwiftMT799Api.Controllers.SwiftMessageController|Table created or already exists. 
+2024-08-19 10:15:14.4254|0|INFO|SwiftMT799Api.Controllers.SwiftMessageController|Data saved to database successfully. 
+2024-08-19 10:15:14.4254|0|INFO|SwiftMT799Api.Controllers.SwiftMessageController|File processed and data saved successfully. 
+2024-08-19 10:15:14.4254|103|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action method SwiftMT799Api.Controllers.SwiftMessageController.UploadSwiftFile (SwiftMT799Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 7.7869ms. 
+2024-08-19 10:15:14.4254|52|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2024-08-19 10:15:14.4254|53|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2024-08-19 10:15:14.4254|52|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2024-08-19 10:15:14.4254|53|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2024-08-19 10:15:14.4254|52|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: Before executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2024-08-19 10:15:14.4254|53|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: After executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2024-08-19 10:15:14.4254|5|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Before executing action result Microsoft.AspNetCore.Mvc.OkObjectResult. 
+2024-08-19 10:15:14.4271|11|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|List of registered output formatters, in the following order: Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter 
+2024-08-19 10:15:14.4271|4|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|No information found on request to perform content negotiation. 
+2024-08-19 10:15:14.4271|8|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|Attempting to select an output formatter without using a content type as no explicit content types were specified for the response. 
+2024-08-19 10:15:14.4271|10|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|Attempting to select the first formatter in the output formatters list which can write the result. 
+2024-08-19 10:15:14.4271|2|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter' and content type 'text/plain' to write the response. 
+2024-08-19 10:15:14.4271|1|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing OkObjectResult, writing value of type 'System.String'. 
+2024-08-19 10:15:14.4271|6|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|After executing action result Microsoft.AspNetCore.Mvc.OkObjectResult. 
+2024-08-19 10:15:14.4271|52|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: Before executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2024-08-19 10:15:14.4271|53|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: After executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2024-08-19 10:15:14.4271|52|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Resource Filter: Before executing OnResourceExecuted on filter Microsoft.AspNetCore.Mvc.ConsumesAttribute. 
+2024-08-19 10:15:14.4271|53|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Resource Filter: After executing OnResourceExecuted on filter Microsoft.AspNetCore.Mvc.ConsumesAttribute. 
+2024-08-19 10:15:14.4271|105|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action SwiftMT799Api.Controllers.SwiftMessageController.UploadSwiftFile (SwiftMT799Api) in 13.5464ms 
+2024-08-19 10:15:14.4271|1|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'SwiftMT799Api.Controllers.SwiftMessageController.UploadSwiftFile (SwiftMT799Api)' 
+2024-08-19 10:15:14.4271|9|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN6039FGN991" completed keep alive response. 
+2024-08-19 10:15:14.4271|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 POST http://localhost:5284/api/SwiftMessage - 200 - text/plain;+charset=utf-8 22.4658ms 
+2024-08-19 10:15:34.9353|6|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HN6039FGN991" received FIN. 
+2024-08-19 10:15:34.9373|7|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HN6039FGN991" sending FIN because: "The Socket transport's send loop completed gracefully." 
+2024-08-19 10:15:34.9373|10|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN6039FGN991" disconnecting. 
+2024-08-19 10:15:34.9373|2|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN6039FGN991" stopped. 

@@ -2,9 +2,10 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Http;
 using System.IO;
 using System.Collections.Generic;
-using System.Data.SQLite;
+using Microsoft.Data.Sqlite;
 using Microsoft.Extensions.Logging;
 using System;
+using System.Text.Json;
 
 namespace SwiftMT799Api.Controllers
 {
@@ -19,7 +20,11 @@ namespace SwiftMT799Api.Controllers
             _logger = logger;
         }
 
-        // POST api/SwiftMessage
+        /// <summary>
+        /// Uploads and processes a Swift MT799 message file.
+        /// </summary>
+        /// <param name="file">The Swift MT799 message file to be processed.</param>
+        /// <returns>An IActionResult indicating the success or failure of the operation.</returns>
         [HttpPost]
         public IActionResult UploadSwiftFile(IFormFile file)
         {
@@ -44,12 +49,12 @@ namespace SwiftMT799Api.Controllers
             catch (Exception ex)
             {
                 _logger.LogError(ex, "Error reading file content.");
-                return StatusCode(StatusCodes.Status500InternalServerError, "Error processing file.");
+                return StatusCode(StatusCodes.Status500InternalServerError, "Error processing file: " + ex.Message);
             }
 
             // Parse the Swift MT799 message
             var fields = ParseSwiftMessage(content);
-            if (fields == null)
+            if (fields.Count == 0)
             {
                 _logger.LogWarning("Failed to parse Swift message.");
                 return BadRequest("Invalid Swift MT799 message format.");
@@ -62,23 +67,27 @@ namespace SwiftMT799Api.Controllers
             }
 
             // Save parsed data to the database
+            bool savedToDatabase = false;
             try
             {
-                SaveToDatabase(fields);
+                savedToDatabase = SaveToDatabase(fields);
                 _logger.LogInformation("File processed and data saved successfully.");
-            }
-            catch (SQLiteException ex)
-            {
-                _logger.LogError(ex, $"SQLite error: {ex.ErrorCode} - {ex.Message}");
-                return StatusCode(StatusCodes.Status500InternalServerError, "SQLite error occurred while saving data.");
             }
             catch (Exception ex)
             {
-                _logger.LogError(ex, "General error occurred while saving data to the database.");
-                return StatusCode(StatusCodes.Status500InternalServerError, "Error saving data.");
+                _logger.LogError(ex, "Error occurred while saving data to the database.");
+                // Note: We're not returning an error here, as we still want to show the parsed fields
             }
 
-            return Ok("File processed successfully.");
+            // Prepare the response
+            var response = new SwiftMessageResponse
+            {
+                Message = "File processed successfully.",
+                ParsedFields = fields,
+                SavedToDatabase = savedToDatabase
+            };
+
+            return Ok(response);
         }
 
         // Method to parse the Swift MT799 message
@@ -103,7 +112,7 @@ namespace SwiftMT799Api.Controllers
             if (!fields.ContainsKey("Reference") || !fields.ContainsKey("RelatedReference") || !fields.ContainsKey("Narrative"))
             {
                 _logger.LogWarning("Missing required fields in the Swift message.");
-                return null;
+                return new Dictionary<string, string>();
             }
 
             _logger.LogInformation("Parsing completed.");
@@ -111,17 +120,23 @@ namespace SwiftMT799Api.Controllers
         }
 
         // Method to save parsed data to SQLite database
-        private void SaveToDatabase(Dictionary<string, string> fields)
+        private bool SaveToDatabase(Dictionary<string, string> fields)
         {
             _logger.LogInformation("Saving data to database.");
 
-            // Ensure the database path is correct
             string dbPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "swift_messages.db");
             _logger.LogInformation($"SQLite Database Path: {dbPath}");
 
+            // Ensure the directory exists
+            string? directoryPath = Path.GetDirectoryName(dbPath);
+            if (!string.IsNullOrEmpty(directoryPath))
+            {
+                Directory.CreateDirectory(directoryPath);
+            }
+
             try
             {
-                using (var connection = new SQLiteConnection($"Data Source={dbPath};Version=3;"))
+                using (var connection = new SqliteConnection($"Data Source={dbPath}"))
                 {
                     connection.Open();
 
@@ -129,7 +144,7 @@ namespace SwiftMT799Api.Controllers
                     _logger.LogInformation("Database connection opened successfully.");
 
                     // Create the table if it doesn't exist
-                    using (var createTableCmd = new SQLiteCommand())
+                    using (var createTableCmd = new SqliteCommand())
                     {
                         createTableCmd.Connection = connection;
                         createTableCmd.CommandText = @"CREATE TABLE IF NOT EXISTS SwiftMessages (
@@ -143,7 +158,7 @@ namespace SwiftMT799Api.Controllers
                     }
 
                     // Insert parsed data into the table
-                    using (var command = new SQLiteCommand())
+                    using (var command = new SqliteCommand())
                     {
                         command.Connection = connection;
                         command.CommandText = @"INSERT INTO SwiftMessages (Reference, RelatedReference, Narrative) 
@@ -156,17 +171,25 @@ namespace SwiftMT799Api.Controllers
                         _logger.LogInformation("Data saved to database successfully.");
                     }
                 }
+                return true; // Return true if save was successful
             }
-            catch (SQLiteException ex)
+            catch (SqliteException ex)
             {
                 _logger.LogError(ex, $"SQLite error: {ex.ErrorCode} - {ex.Message}");
-                throw;  // Re-throw the exception to ensure the error is propagated
+                return false; // Return false if save failed
             }
             catch (Exception ex)
             {
                 _logger.LogError(ex, "General error occurred while saving data to the database.");
-                throw;  // Re-throw the exception to ensure the error is propagated
+                return false; // Return false if save failed
             }
         }
+    }
+
+    public class SwiftMessageResponse
+    {
+        public string Message { get; set; }
+        public Dictionary<string, string> ParsedFields { get; set; }
+        public bool SavedToDatabase { get; set; }
     }
 }

@@ -1,0 +1,14 @@
+2024-08-19 10:15:40.5862 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2024-08-19 10:15:40.5882 Info Registered target NLog.Targets.ConsoleTarget(Name=lifetimeConsole)
+2024-08-19 10:15:40.5882 Info Registered target NLog.Targets.FileTarget(Name=ownFile-web)
+2024-08-19 10:15:40.5944 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.3.3.2683. Product version: 5.3.3+341c753ad4dce4dd476dcf0bc3ff2cfd9db76493. GlobalAssemblyCache: False
+2024-08-19 10:15:40.6635 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=54, FilePath=/Users/elizaognyanova/SwiftMT799Api/bin/Debug/net8.0/nlog.config
+2024-08-19 10:15:40.6678 Info Configuration initialized.
+2024-08-19 10:15:40.7716 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=54, FilePath=/Users/elizaognyanova/SwiftMT799Api/bin/Debug/net8.0/nlog.config
+2024-08-19 10:16:04.3091 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2024-08-19 10:16:04.3108 Info Registered target NLog.Targets.ConsoleTarget(Name=lifetimeConsole)
+2024-08-19 10:16:04.3110 Info Registered target NLog.Targets.FileTarget(Name=ownFile-web)
+2024-08-19 10:16:04.3164 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.3.3.2683. Product version: 5.3.3+341c753ad4dce4dd476dcf0bc3ff2cfd9db76493. GlobalAssemblyCache: False
+2024-08-19 10:16:04.3507 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=54, FilePath=/Users/elizaognyanova/SwiftMT799Api/bin/Debug/net8.0/nlog.config
+2024-08-19 10:16:04.3549 Info Configuration initialized.
+2024-08-19 10:16:04.4187 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=54, FilePath=/Users/elizaognyanova/SwiftMT799Api/bin/Debug/net8.0/nlog.config

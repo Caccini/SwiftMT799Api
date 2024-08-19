@@ -1,0 +1,32 @@
+2024-08-19 09:28:31.9971 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2024-08-19 09:28:32.0156 Info Registered target NLog.Targets.ConsoleTarget(Name=lifetimeConsole)
+2024-08-19 09:28:32.0176 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'ownFile-web' not found for logging rule: Microsoft.Hosting.Lifetime.
+2024-08-19 09:28:32.0176 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'ownFile-web' not found for logging rule: *.
+2024-08-19 09:28:32.0214 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.3.3.2683. Product version: 5.3.3+341c753ad4dce4dd476dcf0bc3ff2cfd9db76493. GlobalAssemblyCache: False
+2024-08-19 09:28:32.0662 Info Validating config: TargetNames=allfile, lifetimeConsole, ConfigItems=29, FilePath=/Users/elizaognyanova/SwiftMT799Api/bin/Debug/net8.0/nlog.config
+2024-08-19 09:28:32.0707 Info Configuration initialized.
+2024-08-19 09:28:32.1754 Info Validating config: TargetNames=allfile, lifetimeConsole, ConfigItems=29, FilePath=/Users/elizaognyanova/SwiftMT799Api/bin/Debug/net8.0/nlog.config
+2024-08-19 09:36:17.1799 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2024-08-19 09:36:17.1921 Info Registered target NLog.Targets.ConsoleTarget(Name=lifetimeConsole)
+2024-08-19 09:36:17.1940 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'ownFile-web' not found for logging rule: Microsoft.Hosting.Lifetime.
+2024-08-19 09:36:17.1940 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'ownFile-web' not found for logging rule: *.
+2024-08-19 09:36:17.1977 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.3.3.2683. Product version: 5.3.3+341c753ad4dce4dd476dcf0bc3ff2cfd9db76493. GlobalAssemblyCache: False
+2024-08-19 09:36:17.2316 Info Validating config: TargetNames=allfile, lifetimeConsole, ConfigItems=29, FilePath=/Users/elizaognyanova/SwiftMT799Api/bin/Debug/net8.0/nlog.config
+2024-08-19 09:36:17.2360 Info Configuration initialized.
+2024-08-19 09:36:17.3448 Info Validating config: TargetNames=allfile, lifetimeConsole, ConfigItems=29, FilePath=/Users/elizaognyanova/SwiftMT799Api/bin/Debug/net8.0/nlog.config
+2024-08-19 09:43:20.3692 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2024-08-19 09:43:20.3877 Info Registered target NLog.Targets.ConsoleTarget(Name=lifetimeConsole)
+2024-08-19 09:43:20.3896 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'ownFile-web' not found for logging rule: Microsoft.Hosting.Lifetime.
+2024-08-19 09:43:20.3897 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'ownFile-web' not found for logging rule: *.
+2024-08-19 09:43:20.3931 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.3.3.2683. Product version: 5.3.3+341c753ad4dce4dd476dcf0bc3ff2cfd9db76493. GlobalAssemblyCache: False
+2024-08-19 09:43:20.4399 Info Validating config: TargetNames=allfile, lifetimeConsole, ConfigItems=29, FilePath=/Users/elizaognyanova/SwiftMT799Api/bin/Debug/net8.0/nlog.config
+2024-08-19 09:43:20.4444 Info Configuration initialized.
+2024-08-19 09:43:20.5355 Info Validating config: TargetNames=allfile, lifetimeConsole, ConfigItems=29, FilePath=/Users/elizaognyanova/SwiftMT799Api/bin/Debug/net8.0/nlog.config
+2024-08-19 09:44:19.1677 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2024-08-19 09:44:19.1799 Info Registered target NLog.Targets.ConsoleTarget(Name=lifetimeConsole)
+2024-08-19 09:44:19.1818 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'ownFile-web' not found for logging rule: Microsoft.Hosting.Lifetime.
+2024-08-19 09:44:19.1818 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'ownFile-web' not found for logging rule: *.
+2024-08-19 09:44:19.1853 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.3.3.2683. Product version: 5.3.3+341c753ad4dce4dd476dcf0bc3ff2cfd9db76493. GlobalAssemblyCache: False
+2024-08-19 09:44:19.2215 Info Validating config: TargetNames=allfile, lifetimeConsole, ConfigItems=29, FilePath=/Users/elizaognyanova/SwiftMT799Api/bin/Debug/net8.0/nlog.config
+2024-08-19 09:44:19.2260 Info Configuration initialized.
+2024-08-19 09:44:19.2852 Info Validating config: TargetNames=allfile, lifetimeConsole, ConfigItems=29, FilePath=/Users/elizaognyanova/SwiftMT799Api/bin/Debug/net8.0/nlog.config
